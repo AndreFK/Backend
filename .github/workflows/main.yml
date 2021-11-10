@@ -20,7 +20,7 @@ jobs:
         go-version: '1.17.3'
       
     - name: Set credentials value
-      run: echo -e ${{ secrets.Test_Secrets }} >> internal/sharefile/credentials.yaml 
+      run: echo -e ${{ secrets.Test_Secrets }} > /internal/sharefile/credentials.yaml 
     
     - name: Check credentials value
       id: cred_values
