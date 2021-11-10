@@ -24,7 +24,7 @@ jobs:
     
     - name: Check credentials value
       id: cred_values
-      run: echo ::set-output name=credentials_value::$(cat internal/sharefile/credentials.yaml)
+      run: echo ::set-output name=credentials_value::$(cat credentials.yaml)
     
     - name: Test output
       run: echo ${{ steps.cred_values.outputs.credentials_value }}
